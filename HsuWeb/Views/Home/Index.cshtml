@@ -4,17 +4,87 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <script src="~/Scripts/vue/vue.js"></script>
     <script src="~/Scripts/vue/Component.js"></script>
     <script src="~/Scripts/vue/axios.min.js"></script>
 </head>
 <body>
-    <div id="app">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                    <li>@Html.ActionLink("關於", "About", "Home")</li>
+                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div  id="app">
+        <div class="container">
+            <h4>Intro</h4>
+            <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubiliavf.</p>
+        </div>
+
+        <div class="container">
+            <h4>Detail</h4>
+            <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in </p>
+        </div>
+
+        <div class="container">
+            <h4>Artical</h4>
+            <div class="col-md-4">
+                <img src="~/Content/Penguins.jpg" class="img-responsive" alt="Responsive image">
+                <h5>pic01</h5>
+                <p>0000000</p>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Content/Penguins.jpg" class="img-responsive" alt="Responsive image">
+                <h5>pic01</h5>
+                <p>0000000</p>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Content/Penguins.jpg" class="img-responsive" alt="Responsive image">
+                <h5>pic01</h5>
+                <p>0000000</p>
+            </div>
+        </div>
+
+
+        <div class="container" style="background-color:#0094ff">
+            <h4>Contact</h4>
+            <div class="col-md-6">
+                <h5>聯絡資訊</h5>
+                <p>address</p>
+                <p>phone</p>
+                <p>mail</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Map</h5>                
+            </div>
+        </div>
+
+
+
         <app-header></app-header>
-        <app-intro></app-intro>
-        <app-artical></app-artical>
-        <app-contact></app-contact>
-        <app-footer></app-footer>
+            <app-intro></app-intro>
+            <app-artical></app-artical>
+            <app-contact></app-contact>
+            <app-footer></app-footer>
     </div>
 </body>
 </html>
