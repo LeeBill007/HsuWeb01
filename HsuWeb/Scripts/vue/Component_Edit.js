@@ -2,11 +2,10 @@
 Vue.component('artical-list', {
     template: `
         <div>
-            {{data}}
-            <button @click="test">fff</button>
+        {{ee}}
         </div>
         `,
-    beforeCreated: function () {
+    beforeCreate:function () {
         axios.post('/Home/Artical_pre')
                 .then(function (res) {
                     art.ee = res.data
@@ -16,20 +15,13 @@ Vue.component('artical-list', {
                     console.log(error)
                 })
     },
-    data:{
-        
-    }
-    methods: {
-        test: function () {
-            axios.post('/Home/Artical_pre')
-                .then(function (res) {
-                    art.ee = res.data
-                    console.log(art.ee);
-                })
-                .catch(function (error) {
-                    console.log(error)
-                })
+    data:function(){
+        return {
+            ee:[]
         }
+    },
+    methods: {
+
     }
 });
 
