@@ -20,23 +20,20 @@ Vue.component('app-footer', {
 /* Content-Intro*/
 Vue.component('app-intro', {
     template: '<div>Intro</div>'
-}
-);
+});
 
 
 
 /* Content-Artical */
 Vue.component('app-artical', {
-    template: '<div class="container">' +
-                '<h4>Artical</h4>' +
-                `
+    template: `<div class="container">
+                    <h4>Artical</h4>
                     <ul>
                         <li v-for="item in test">{{item.title}} / {{item.intro}}
                         </li>
                     </ul>
-
-                ` +
-                '</div>',
+                    </div>
+                ` ,                
     data: function () {
         return {
             test:
